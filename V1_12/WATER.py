@@ -3,7 +3,8 @@ from math import *
 import numpy as np
 r = 10026.35e-3
 vol = np.pi*pow(r, 3)*2
-defPPM = [0.002, 0.01]
+mass = vol*1e3
+defPPM = [0.002, 0.01] #[Rn222 [Bq/kg], RN]
 IsoAct = defPPM
 revIsoAct = defPPM
 IsoList = Iso.WATER
@@ -16,10 +17,15 @@ EffErr = [Eff.WATERRn222Err]
          #[0]]
 def Activity(PPM):
     IAct = []
-    for i in range(len(PPM)-1):
-        IAct.append(PPM[i]*vol)
-        print('Activity for ' + Iso.WATER[i] + ' = %5e' % IAct[i])
-    IAct.append(defPPM[-1])
+   # for i in range(len(PPM)-1):
+   #     IAct.append(PPM[i]*vol)
+   #     print('Activity for ' + Iso.WATER[i] + ' = %5e' % IAct[i])
+   # IAct.append(defPPM[-1])
+   #Rn222
+    IAct.append(PPM[0]*vol*mass)
+    print('Activity for ' + Iso.WATER[i] + ' = %.5e' % IAct[0])
+    IAct.append(PPM[1])
+    print('Activity for ' + Iso.Water[i] + ' = %.5e' % IAct[1])
     return IAct
 def revActivity(BG, Eff, NEff):
     rIsoAct = []
