@@ -23,9 +23,9 @@ def Activity(PPM):
    # IAct.append(defPPM[-1])
    #Rn222
     IAct.append(PPM[0]*vol*mass)
-    print('Activity for ' + Iso.WATER[i] + ' = %.5e' % IAct[0])
+    print('Activity for ' + Iso.WATER[0] + ' = %.5e' % IAct[0])
     IAct.append(PPM[1])
-    print('Activity for ' + Iso.Water[i] + ' = %.5e' % IAct[1])
+    print('Activity for ' + Iso.WATER[1] + ' = %.5e' % IAct[1])
     return IAct
 def revActivity(BG, Eff, NEff):
     rIsoAct = []

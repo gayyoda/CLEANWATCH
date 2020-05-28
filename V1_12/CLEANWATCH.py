@@ -108,7 +108,7 @@ def menu(): #menu text
         print('- Input Values for Efficiency    [e]')
         print('- Calculate Background Rate      [bgr]')
         print('- Calculate Time Detection       [td]')
-        print('- Minimum Time Detection         [mintd]')
+        #print('- Minimum Time Detection         [mintd]')
         print('- Calculate Maximum Background   [maxbg]')
         print('- Cleanliness Budget             [cb]')
         print('- Exit software                  [exit]')

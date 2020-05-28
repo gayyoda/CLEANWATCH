@@ -4,7 +4,7 @@ import Eff
 import Iso
 TankR = 10026.35e-3
 Height = 10026.35e-3
-defPPM = [10e-3, 0.2e-3, 0.25e-3, 0.28e-3, 0.35e-3, 1.7e-3] #mBq/kg
+defPPM = [4.96e-5, 2.48e-5, 2.31e-5, 4.86e-5, 2.48e-5, 4.86e-5] #Bq/kg [U238, Th232, U235]
 IsoAct = defPPM
 revIsoAct = defPPM
 IsoList = Iso.GD
