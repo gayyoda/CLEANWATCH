@@ -458,7 +458,7 @@ def bgrate():
         for x in range(len(WATER.IsoDecay[i])):
             if WATER.IsoDecay[i][x] == 'Tl210':
                 WATERBG_P[i][x] = (WATEREff[i][x]*WATERAct[i]*0.002)
-                WATERBG_N[i][x] = (WATEREff[i][x]*WATERAct[i]*0.002)
+                WATERBG_N[i][x] = (WATER_Nr[i][x]*WATERAct[i]*0.002)
             else:
                 WATERBG_P[i][x] = WATERAct[i]*WATEREff[i][x]
                 WATERBG_N[i][x] = WATERAct[i]*WATER_Nr[i][x]
@@ -505,7 +505,7 @@ def bgrate():
                 GDBG_N[i][x] = (GD_Nr[i][x]*GDAct[3]*0.002)
             else:
                 GDBG_P[i][x] = (GDEff[i][x]*GDAct[i])
-                GDBG_N[i][x] = (GDEff[i][x]*GDAct[i])
+                GDBG_N[i][x] = (GD_Nr[i][x]*GDAct[i])
             #if GD.IsoDecay[i][x] == 'Ac228':
             #    GDBG_P[i][x] = GDEff[i][x]*GDAct[1]
             #    GDBG_N[i][x] = GD_Nr[i][x]*GDAct[1]
